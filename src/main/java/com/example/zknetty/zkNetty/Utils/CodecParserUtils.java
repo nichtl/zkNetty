@@ -242,7 +242,7 @@ public class CodecParserUtils {
                //将完整数据包交给handler处理
                System.out.println("文本消息");
            }
-           /*定位上报    此处float数据应该是大端序但在window和linux中字节是小端序 需要将小端序转换为大端序后才能使用*/
+           /*定位上报    此处float数据应该是大端序但终端上报的是小端序 需要将小端序转换为大端序后才能使用*/
            else if (WatchConstant.UploadSecProCode.UploadLocateData.equals(watchBeans.getSecpro())) {
                CodecParserUtils.ParserLocateData(byteBuf, watchBeans);
                //将完整数据包交给handler处理
